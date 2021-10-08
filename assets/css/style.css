@@ -1,0 +1,49 @@
+    body{
+    background-color:#FF6B00 ;
+    text-align: center;
+    font-family: Georgia, verdana,sans-serif;
+    Font-size: 24px;
+    padding:20px;
+
+    }
+    header{
+    text-align: center;
+
+    }
+    button{
+    margin-top:20px;
+    line-height: 60px;
+    font-weight:bold;
+    padding: 0 40px;
+    background: lightcoral;
+    border: none;
+    }button:hover{
+        background:orangered;
+    }
+
+/*body{
+    background-color:#FF6B00 ;
+    display: flex;
+    align-items: center;
+
+
+}
+header{
+    margin: 7px 0;
+}
+header nav ul{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+*/
+/* Footer styles start */
+footer ul {
+  list-style-type: none;
+}
+.contributers a {
+  text-decoration: none;
+}
+/* Footer styles end */
