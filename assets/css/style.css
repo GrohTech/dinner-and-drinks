@@ -25,7 +25,7 @@
     background-color:#FF6B00 ;
     display: flex;
     align-items: center;
-    
+
 
 }
 header{
@@ -38,4 +38,12 @@ header nav ul{
     align-items: center;
     list-style: none;
 }
-/*
+*/
+/* Footer styles start */
+footer ul {
+  list-style-type: none;
+}
+.contributers a {
+  text-decoration: none;
+}
+/* Footer styles end */

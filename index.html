@@ -2,64 +2,61 @@
 <html lang = "en" >
     <head>
         <meta charset = "UTF-8"/>
-        <meta name = "viewport" content="width=device-device,initial-scale=1.0"/>
+        <meta name = "viewport" content="width=device-width,initial-scale=1.0"/>
         <link rel ="stylesheet" href="./assets/css/style.css">
-        <script type="text/javascript" src="./assets/js/script.js"></script>
         <title>Dinner and Drinks</title>
         </head>
         <body>
             <header>
                 <!--webpage title(what the user sees)-->
-                <h1>Dinner and Drinks</h1>      
+                <h1>Dinner and Drinks</h1>
             </header>
-            
+
             <!--Add API somewhere here-->
             <!--Button as a link??-->
-            <section id = Dinner-drinks class="begin">   
-            <button onclick = "createButton()">Button</button>
+            <section id = Dinner-drinks class="begin">
+            <button onclick = "createButton()">What's for dinner?</button>
 
             <!-- Cocktail section -->
             <div class="cocktail">
                 <div class="splash">
-                    <h1 class="splash-head">Cocktail Recipe:</h1>
-                    <p class="splash-subhead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                    <p>
-                        <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-                    </p>
+                    <h2 class="splash-head">Here's your cocktail recipe:</h2>
+                    <h3 id="random-cocktail"></h3>
+                    <h4>Drink type:</h4>
+                    <p id="drink-category"></p>
+                    <h4>Drink Vehicle:</h4>
+                    <p id="glass-type"></p>
                 </div>
             </div>
-    
+
             <!-- Meal Recipe -->
             <div class="meal">
                 <div class="splash">
-                    <h1 class="splash-head">Meal Recipe:</h1>
-                    <p class="splash-subhead">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                    <p>
-                        <a href="http://purecss.io" class="pure-button pure-button-primary">Get Started</a>
-                    </p>
+                    <h2 class="splash-head">Here's your meal recipe:</h2>
+                    <h3 id="random-meal"></h3>
+                    <div class="cuisine-container">
+                        <h4>Cuisine:</h4>
+                        <p id="cuisine"></p>
+                    </div>
+                    <div class="meal-category-container">
+                        <h4>Meal type:</h4>
+                        <p id="meal-category"></p>
+                    </div>
                 </div>
             </div>
-            
-            
+
+
             <footer class="footer">
                 <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                    <a class="pure-menu-heading" href="">Your Site</a>
-            
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-                        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+                    <p>Meet the contributors:</p>
+                    <ul class="contributors">
+                        <li><a href="https://github.com/Perez-outlook" target="_blank" class="pure-menu-link">Diana Perez</a></li>
+                        <li><a href="https://github.com/Hmlessard" target="_blank" class="pure-menu-link">Heather Lessard</a></li>
+                        <li class="pure-menu-item pure-menu-selected"><a href="https://github.com/GrohTech" target="_blank">Lauren Groh</a></li>
                     </ul>
                 </div>
             </footer>
-            </body>   
+            <script type="text/javascript" src="./assets/js/script.js"></script>
+            </body>
 
         </html>
-
-
-
-
