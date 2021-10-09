@@ -1,21 +1,36 @@
 /* Global styles start */
-    body{
-    background-color: rgb(219, 188, 148) ;
+body{
+    background-color: rgb(190, 170, 141);
     text-align: center;
     font-family: Georgia, verdana,sans-serif;
     font-size: 24px;
     padding:20px;
-
     }
-    /*sticky header?*/
-    header{
+
+/* why won't this background image work?*/
+    .bg-img{
+        position: relative;
+        background-image: url ("https://images.search.yahoo.com/images/view;_ylt=AwrJ4NZh9mFhhzkApMGJzbkF;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2UzZDA4MDY2ODhkOTM3N2MxNDBhYWRjODhjYjNhNTUwBGdwb3MDMzQEaXQDYmluZw--?back=https%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Ddinner%2Band%2Bdrinks%2Bimage%26ei%3DUTF-8%26type%3DC211US1264D20170306%26fr%3Dmcafee%26h%3D449%26tt%3DTop%2B5%2BPlaces%2Bfor%2BPre-Dinner%2BDrinks%2Bin%2BLondon%2B%25E2%2580%2593%2BTruly%2B...%26w%3D1000%26imgurl%3Dhttps%253A%252F%252Ftrulyexperiences.com%252Fblog%252Fwp-content%252Fuploads%252F2012%252F05%252Fshutterstock_105951236.jpg%26rurl%3Dhttp%253A%252F%252Ftrulyexperiences.com%252Fblog%252F2012%252F05%252Ftop-5-places-for-pre-dinner-drinks-in-london%26turl%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.6HihbneRiEIQjK45vOC6TgHaDU%2526pid%253DApi%2526rs%253D1%2526c%253D1%2526qlt%253D95%2526w%253D247%2526h%253D110%26tw%3D247.9%26th%3D110.9%26sigr%3DJ6kaXFkU4nQD%26sigi%3DvzM1uS2_vGXs%26sigt%3Da9ZsjZ5y.tCP%26sigit%3DcpaXhq4GgQXc%26tab%3Dorganic%26ri%3D34&w=1024&h=540&imgurl=sensiseeds.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F12%2FHosting-a-cannabis-dinner-party-1024x540.jpg&rurl=https%3A%2F%2Fsensiseeds.com%2Fen%2Fblog%2Fyoure-hosting-cannabis-dinner-party%2F&size=119.9KB&p=dinner+and+drinks+image&oid=e3d0806688d9377c140aadc88cb3a550&fr2=&fr=mcafee&tt=So+You%E2%80%99re+Hosting+A+Cannabis+Dinner+Party%E2%80%A6+%7C+Sensi+Seeds+...&b=0&ni=21&no=34&ts=&tab=organic&sigr=pq2NUG_M6ErW&sigb=kSOjcrAh12n5&sigi=XspUVCsOjzR3&sigt=Xh4oLd9O.qgR&.crumb=T7Xg6RLvOY1&fr=mcafee&type=C211US1264D20170306");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        filter: blur(8px);
+    } 
+   
+
+/* Global styles end */
+
+ /*sticky header?*/
+ header{
     text-align: center;
-    position:sticky;
+    position: sticky;
     }
 
     header img {
         inline-size: 150px;
         object-position: left top;
+        float: left
     }
 
     button{
@@ -27,46 +42,44 @@
     border: none;
     }button:hover{
         background:orangered;
-    }
-
-/*body{
-    background-color:#FF6B00 ;
-    display: flex;
-    align-items: center;
-
-
-}
-header{
-    margin: 7px 0;
-    position: sticky;
-}
-
-*/
-/* Global styles end */
-
+    } 
 
 /* Random cocktail/meal styles start */
-
+.cocktail-meal-container {
+    padding: 100px;
+}
+.meal{
+    background-color: rgb(108, 153, 153);
+}
 
 /* Random cocktail/meal styles start */
-
+.cocktail{
+    background-color: rgb(245, 166, 76);
+}
 
 /* Footer styles start */
 footer ul {
   list-style-type: none;
 }
-.contributers a {
+.contributors{
+    color: rgb(49, 48, 48);
+}
+.names a {
   text-decoration: none;
   display:flex;
   padding: 10%;
+  color:rgb(39, 39, 39)
 }
 
-.contributers{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    list-style:none
+footer div ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
 }
+
+
 /* Footer styles end */
 
 
