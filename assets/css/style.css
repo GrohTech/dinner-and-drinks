@@ -21,21 +21,41 @@
         background:orangered;
     }
 
-/*body{
-    background-color:#FF6B00 ;
-    display: flex;
-    align-items: center;
-    
-
-}
+/*media queries --- adjust to display size*/
+@media screen and (max-width: 980px){
 header{
-    margin: 7px 0;
-}
-header nav ul{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-/*
+    padding-bottom: 0;
+    justify-content:center;
+    position: relative;
+    }
+    footer h2 {
+        text-align:center;
+        width:100%;
+    }
+    .onClick{
+        text-align: center;
+        width:100;
+        flex: 1 100%;  
+      }
+    }
+      @media screen and (max-width:768px){
+        section{
+            padding: 30px 15px;
+
+            }
+            footer h2 {
+                text-align:center;
+                width:100%;
+            }
+            .onClick{
+                text-align: center;
+                width:100;
+                flex: 1 100%;  
+              }
+            }
+    @media screen and (max-width:575px){
+        .onClick {
+            width:100%;
+        }
+
+    }
