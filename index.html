@@ -6,21 +6,23 @@
         <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
         <link rel ="stylesheet" href="./assets/css/style.css">
         <title>Dinner and Drinks</title>
+        
     </head>
     <body>
+        
         <section id = Dinner-drinks>
             <header>
                 <!--webpage title(what the user sees)-->
                 <img id=logo src="assets/css/images/D-D-logo.png" alt=""/>
                 <h1>Dinner and Drinks</h1>
                 <!--Button as a link?? Hide cocktail and meals until button is pushed-->
-                <button onclick = "createButton()">What's for dinner?</button>
+                <button onclick = "createButton()">What am I making?</button>
             </header>
-
+            <div class= "bg-image"></div>
             <!--Have cocktail and meal divs side-by-side, each box a different background color-->
             <!-- Cocktail section make orange color -->
             <div class="cocktail-meal-container pure-g">
-                <div class="cocktail pure-u-1-2">
+                <div class="cocktail pure-u-1-2" class="cocktails">
                     <div>
                         <h2>Here's your cocktail recipe:</h2>
                         <h3 id="random-cocktail"></h3>
@@ -34,7 +36,7 @@
                 </div>
 
                 <!-- Meal Recipe color, blended edges border?-->
-                <div class="meal pure-u-1-2">
+                <div class="meal pure-u-1-2" class="meals">
                     <div>
                         <h2>Here's your meal recipe:</h2>
                         <h3 id="random-meal"></h3>
@@ -52,7 +54,8 @@
         </section>
         <footer class="footer">
             <div>
-                <ul class="contributors">
+                <h3 class= "contributors">Contributors</h3>
+                <ul class="names">
                     <li><a href="https://github.com/Perez-outlook" target="_blank" class="pure-menu-link">Diana Perez</a></li>
                     <li><a href="https://github.com/Hmlessard" target="_blank" class="pure-menu-link">Heather Lessard</a></li>
                     <li><a href="https://github.com/GrohTech" target="_blank" class="pure-menu-link">Lauren Groh</a></li>
