@@ -3,70 +3,61 @@
     <head>
         <meta charset = "UTF-8"/>
         <meta name = "viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
         <link rel ="stylesheet" href="./assets/css/style.css">
         <title>Dinner and Drinks</title>
-        </head>
-        <body>
+    </head>
+    <body>
+        <section id = Dinner-drinks>
             <header>
                 <!--webpage title(what the user sees)-->
                 <h1>Dinner and Drinks</h1>
+                <!--Button as a link?? Hide cocktail and meals until button is pushed-->
+                <button onclick = "createButton()">What's for dinner?</button>
             </header>
 
-            <!--Add API somewhere here-->
-            <!--Button as a link?? Hide cocktail and meals until button is pushed-->
-            <section id = Dinner-drinks class="begin">
-            <button onclick = "createButton()">What's for dinner?</button>
             <!--Have cocktail and meal divs side-by-side, each box a different background color-->
             <!-- Cocktail section make orange color -->
-            <div class="cocktail">
-                <div class="splash">
-                    <h2 class="splash-head">Here's your cocktail recipe:</h2>
-                    <h3 id="random-cocktail"></h3>
-                    <h4>Drink type:</h4>
-                    <p id="drink-category"></p>
-                    <h4>Drink Vehicle:</h4>
-                    <p id="glass-type"></p>
-                </div>
-            </div>
-
-            <!-- Meal Recipe color, blended edges border?-->
-            <div class="meal">
-                <div class="splash">
-                    <h2 class="splash-head">Here's your meal recipe:</h2>
-                    <h3 id="random-meal"></h3>
-                    <div class="cuisine-container">
-                        <h4>Cuisine:</h4>
-                        <p id="cuisine"></p>
-                    </div>
-                    <div class="meal-category-container">
-                        <h4>Meal type:</h4>
-                        <p id="meal-category"></p>
+            <div class="cocktail-meal-container pure-g">
+                <div class="cocktail pure-u-1-2">
+                    <div>
+                        <h2>Here's your cocktail recipe:</h2>
+                        <h3 id="random-cocktail"></h3>
+                        <div class=drink-type-container>
+                        <h4 class="flex-1">Drink type:</h4>
+                        <p class="flex-2" id="drink-category"></p>
+                        </div>
+                        <h4>Drink Vehicle:</h4>
+                        <p id="glass-type"></p>
                     </div>
                 </div>
-            </div>
 
-
-            <footer class="footer">
-                <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                    <p>Meet the contributors:</p>
-                    <ul class="contributors">
-                        <li><a href="https://github.com/Perez-outlook" target="_blank" class="pure-menu-link">Diana Perez</a></li>
-                        <li><a href="https://github.com/Hmlessard" target="_blank" class="pure-menu-link">Heather Lessard</a></li>
-                        <li class="pure-menu-item pure-menu-selected"><a href="https://github.com/GrohTech" target="_blank">Lauren Groh</a></li>
-                    </ul>
+                <!-- Meal Recipe color, blended edges border?-->
+                <div class="meal pure-u-1-2">
+                    <div>
+                        <h2>Here's your meal recipe:</h2>
+                        <h3 id="random-meal"></h3>
+                        <div class="cuisine-container">
+                            <h4>Cuisine:</h4>
+                            <p id="cuisine"></p>
+                        </div>
+                        <div class="meal-category-container">
+                            <h4>Meal type:</h4>
+                            <p id="meal-category"></p>
+                        </div>
+                    </div>
                 </div>
-            </footer>
-            <script type="text/javascript" src="./assets/js/script.js"></script>
-            </body>
-
-        <header>
-            <!--webpage title(what the user sees)-->
-            <h1>Dinner and Drinks</h1>      
-        </header>
-        <!--Add API somewhere here-->
-        <!--Button as a link??-->
-        <section id = Dinner-drinks class="begin">   
-            <button onclick = "createButton()">Button</button>
-        
-        </body>
-        </html>
+            </div>
+        </section>
+        <footer class="footer">
+            <div>
+                <ul class="contributors">
+                    <li><a href="https://github.com/Perez-outlook" target="_blank" class="pure-menu-link">Diana Perez</a></li>
+                    <li><a href="https://github.com/Hmlessard" target="_blank" class="pure-menu-link">Heather Lessard</a></li>
+                    <li><a href="https://github.com/GrohTech" target="_blank" class="pure-menu-link">Lauren Groh</a></li>
+                </ul>
+            </div>
+        </footer>
+        <script type="text/javascript" src="./assets/js/script.js"></script>      
+    </body>
+</html>
