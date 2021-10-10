@@ -1,6 +1,8 @@
 
 // Random cocktail variables
 var randomCocktail = document.querySelector("#random-cocktail");
+var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
+var cocktailImg = document.querySelector("#cocktail-img");
 var drinkCategory = document.querySelector("#drink-category");
 var glassType = document.querySelector ("#glass-type");
 // var ingredient1 = document.createElement("p");
@@ -13,6 +15,8 @@ var glassType = document.querySelector ("#glass-type");
 
 // Random meal variables
 var randomMeal = document.querySelector("#random-meal");
+var mealImgContainer = document.querySelector("#meal-img-container");
+var mealImg = document.querySelector("#meal-img");
 var mealCategory = document.querySelector("#meal-category");
 var cuisine = document.querySelector("#cuisine");
 // var mealIngredient1 = document.createElement("p");
@@ -46,7 +50,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 
 
     var randomCocktailValue = data.drinks[0].strDrink;
-    // var alcoholicValue = data.drinks[0].strAlcoholic;
+    cocktailImg.setAttribute('src', data.drinks[0].strDrinkThumb);
     var drinkCategoryValue = data.drinks[0].strCategory;
     var glassTypeValue = data.drinks[0].strGlass;
     // var ingredient1Value = data.drinks[0].strIngredient1;
@@ -58,9 +62,9 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
     // var ingredient7Value = data.drinks[0].strIngredient7;
 
     randomCocktail.innerHTML = randomCocktailValue;
-    // alcoholic.innerHTML = alcoholicValue;
     drinkCategory.innerHTML = drinkCategoryValue;
     glassType.innerHTML = glassTypeValue;
+    cocktailImgContainer.append(cocktailImg);
     // ingredient1.innerHTML = ingredient1Value;
     // ingredient2.innerHTML = ingredient2Value;
     // ingredient3.innerHTML = ingredient3Value;
@@ -98,6 +102,7 @@ function meal() {
 
 
         var randomMealValue = data.meals[0].strMeal;
+        mealImg.setAttribute('src', data.meals[0].strMealThumb);
         var mealCategoryValue = data.meals[0].strCategory;
         var cuisineValue = data.meals[0].strArea;
         // var mealIngredient1Value = data.meals[0].strIngredient1;
@@ -112,6 +117,7 @@ function meal() {
         randomMeal.innerHTML = randomMealValue;
         mealCategory.innerHTML = mealCategoryValue;
         cuisine.innerHTML = cuisineValue;
+        mealImgContainer.append(mealImg);
         // mealIngredient1.innerHTML = mealIngredient1Value;
         // mealIngredient2.innerHTML = mealIngredient2Value;
         // mealIngredient3.innerHTML = mealIngredient3Value;
