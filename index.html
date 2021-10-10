@@ -16,9 +16,9 @@
                 <img id=logo src="assets/css/images/D-D-logo.png" alt=""/>
                 <h1>Dinner and Drinks</h1>
                 <!--Button as a link?? Hide cocktail and meals until button is pushed-->
-                <button onclick = "createButton()">What am I making?</button>
+                
             </header>
-            <div class= "bg-image"></div>
+            <div><button onclick = "createButton()">What am I making?</button></div>
             <!--Have cocktail and meal divs side-by-side, each box a different background color-->
             <!-- Cocktail section make orange color -->
             <div class="cocktail-meal-container pure-g">
@@ -26,12 +26,18 @@
                     <div>
                         <h2>Here's your cocktail recipe:</h2>
                         <h3 id="random-cocktail"></h3>
-                        <div class=drink-type-container>
-                        <h4 class="flex-1">Drink type:</h4>
-                        <p class="flex-2" id="drink-category"></p>
+                        <div id="cocktail-img-container">
+                            <img id="cocktail-img" width="300px" height="300px">
                         </div>
-                        <h4>Drink Vehicle:</h4>
-                        <p id="glass-type"></p>
+
+                        <div class=drink-type-container pure-g>
+                            <h4>Drink type:&nbsp;</h4>
+                            <p id="drink-category"></p>
+                        </div>
+                        <div class="drink-vehicle-container">
+                            <h4>Drink Vehicle:&nbsp;</h4>
+                            <p id="glass-type"></p>
+                        </div>
                     </div>
                 </div>
 
@@ -40,12 +46,17 @@
                     <div>
                         <h2>Here's your meal recipe:</h2>
                         <h3 id="random-meal"></h3>
+                        <div id="meal-img-container">
+                            <img id="meal-img" width="300px" height="300px">
+                        </div>
                         <div class="cuisine-container">
-                            <h4>Cuisine:</h4>
-                            <p id="cuisine"></p>
+                            <div class="cuisine-container">
+                                <h4>Cuisine:&nbsp;</h4>
+                                <p id="cuisine"></p>
+                            </div>
                         </div>
                         <div class="meal-category-container">
-                            <h4>Meal type:</h4>
+                            <h4>Meal type:&nbsp;</h4>
                             <p id="meal-category"></p>
                         </div>
                     </div>

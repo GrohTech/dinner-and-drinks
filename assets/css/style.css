@@ -1,68 +1,97 @@
 /* Global styles start */
+{margin: 0; padding: 0px; box-sizing: border-box;}
 body{
-    background-color: rgb(190, 170, 141);
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+24,ffa73d+24,ffa73d+26,ff7c00+78,ff7f04+84 */
+background: #ffb76b; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 24%, #ffa73d 24%, #ffa73d 26%, #ff7c00 78%, #ff7f04 84%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /*IE6-9 */
     text-align: center;
     font-family: Georgia, verdana,sans-serif;
     font-size: 24px;
     padding:20px;
     }
 
-/* why won't this background image work?*/
-    .bg-img{
-        position: relative;
-        background-image: url ("https://images.search.yahoo.com/images/view;_ylt=AwrJ4NZh9mFhhzkApMGJzbkF;_ylu=c2VjA3NyBHNsawNpbWcEb2lkA2UzZDA4MDY2ODhkOTM3N2MxNDBhYWRjODhjYjNhNTUwBGdwb3MDMzQEaXQDYmluZw--?back=https%3A%2F%2Fimages.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Ddinner%2Band%2Bdrinks%2Bimage%26ei%3DUTF-8%26type%3DC211US1264D20170306%26fr%3Dmcafee%26h%3D449%26tt%3DTop%2B5%2BPlaces%2Bfor%2BPre-Dinner%2BDrinks%2Bin%2BLondon%2B%25E2%2580%2593%2BTruly%2B...%26w%3D1000%26imgurl%3Dhttps%253A%252F%252Ftrulyexperiences.com%252Fblog%252Fwp-content%252Fuploads%252F2012%252F05%252Fshutterstock_105951236.jpg%26rurl%3Dhttp%253A%252F%252Ftrulyexperiences.com%252Fblog%252F2012%252F05%252Ftop-5-places-for-pre-dinner-drinks-in-london%26turl%3Dhttps%253A%252F%252Ftse1.mm.bing.net%252Fth%253Fid%253DOIP.6HihbneRiEIQjK45vOC6TgHaDU%2526pid%253DApi%2526rs%253D1%2526c%253D1%2526qlt%253D95%2526w%253D247%2526h%253D110%26tw%3D247.9%26th%3D110.9%26sigr%3DJ6kaXFkU4nQD%26sigi%3DvzM1uS2_vGXs%26sigt%3Da9ZsjZ5y.tCP%26sigit%3DcpaXhq4GgQXc%26tab%3Dorganic%26ri%3D34&w=1024&h=540&imgurl=sensiseeds.com%2Fblog%2Fwp-content%2Fuploads%2F2016%2F12%2FHosting-a-cannabis-dinner-party-1024x540.jpg&rurl=https%3A%2F%2Fsensiseeds.com%2Fen%2Fblog%2Fyoure-hosting-cannabis-dinner-party%2F&size=119.9KB&p=dinner+and+drinks+image&oid=e3d0806688d9377c140aadc88cb3a550&fr2=&fr=mcafee&tt=So+You%E2%80%99re+Hosting+A+Cannabis+Dinner+Party%E2%80%A6+%7C+Sensi+Seeds+...&b=0&ni=21&no=34&ts=&tab=organic&sigr=pq2NUG_M6ErW&sigb=kSOjcrAh12n5&sigi=XspUVCsOjzR3&sigt=Xh4oLd9O.qgR&.crumb=T7Xg6RLvOY1&fr=mcafee&type=C211US1264D20170306");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-        filter: blur(8px);
-    } 
-   
-
 /* Global styles end */
 
  /*sticky header?*/
  header{
     text-align: center;
+    font-size: 45px;
+    background-color: teal;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: -webkit-sticky; /* for Safari */
     position: sticky;
+    top: 0;
+    align-self: flex-start; /* <-- this is the fix */
     }
 
     header img {
         inline-size: 150px;
         object-position: left top;
-        float: left
+        float: left;
+        padding: 30px;
     }
 
     button{
-    margin-top:20px;
+    margin-top:40px;
     line-height: 60px;
     font-weight:bold;
-    padding: 0 40px;
-    background: lightcoral;
+    padding: 0 60px;
+    background: rgb(255, 136, 0);
     border: none;
-    }button:hover{
+    border-radius: 12px;
+    }
+    button:hover{
         background:orangered;
-    } 
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .button:active {
+        background-color: orangered;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px); 
+/* Header styles end */
+
 
 /* Random cocktail/meal styles start */
 .cocktail-meal-container {
-    padding: 100px;
+    padding: 100px;  
 }
 .meal{
     background-color: rgb(108, 153, 153);
+    box-shadow: 0 0 0 5px rgb(119, 26, 26);
+}
+.cocktail{
+    /*background-image: url("/assets/css/images/orange-cocktails.jpg");*/
+    background-color: rgb(245, 166, 76);
+    box-shadow: 0 0 0 5px rgb(119, 26, 26);
+    
+}
+.drink-type-container, .drink-vehicle-container, .cuisine-container, .meal-category-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Random cocktail/meal styles start */
-.cocktail{
-    background-color: rgb(245, 166, 76);
-}
+/* Random cocktail/meal styles end */
+
 
 /* Footer styles start */
+.footer{
+    background-color: teal;
+}
 footer ul {
   list-style-type: none;
 }
 .contributors{
-    color: rgb(49, 48, 48);
+    color: rgb(224, 217, 217);
+    padding: 20px;
 }
 .names a {
   text-decoration: none;
