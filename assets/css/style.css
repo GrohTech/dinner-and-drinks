@@ -19,7 +19,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
  header{
     text-align: center;
     font-size: 45px;
-    position: sticky;
     background-color: teal;
     flex-wrap: wrap;
     height: 200px;
@@ -27,6 +26,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
     padding: 0;
     margin: 0;
     display: inline-block;
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+    align-self: flex-start; /* <-- this is the fix */
     }
 
     header img {
@@ -43,9 +46,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
     padding: 0 60px;
     background: rgb(255, 136, 0);
     border: none;
-    }button:hover{
+    border-radius: 12px;
+    }
+    button:hover{
         background:orangered;
-    } 
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .button:active {
+        background-color: orangered;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px); 
 /* Header styles end */
 
 
