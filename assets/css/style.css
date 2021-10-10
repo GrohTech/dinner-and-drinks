@@ -1,64 +1,46 @@
 /* Global styles start */
+{margin: 0; padding: 0px; box-sizing: border-box;}
 body{
-    /*background-color: rgb(190, 170, 141);*/
-   /*background-image: url("/assets/css/images/wood.jpg.crdownload");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;*/
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+24,ffa73d+24,ffa73d+26,ff7c00+78,ff7f04+84 */
-/* background: #ffb76b; /* Old browsers */
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+24,ffa73d+24,ffa73d+26,ff7c00+78,ff7f04+84 */
+background: #ffb76b; /* Old browsers */
 background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 24%, #ffa73d 24%, #ffa73d 26%, #ff7c00 78%, #ff7f04 84%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /*IE6-9 */
-
-
-
-
-
-
-   
     text-align: center;
     font-family: Georgia, verdana,sans-serif;
     font-size: 24px;
     padding:20px;
     }
 
-/* why won't this background image work?*/
-   /*.bg-img{
-        position: relative;
-        background-image: url("/assets/css/images/cheers.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-        filter: blur(8px);
-    } */
-   
-
 /* Global styles end */
 
  /*sticky header?*/
  header{
     text-align: center;
+    font-size: 45px;
     position: sticky;
     background-color: teal;
-     
-    
     flex-wrap: wrap;
+    height: 200px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
     }
 
     header img {
         inline-size: 150px;
         object-position: left top;
-        float: left
+        float: left;
+        padding: 30px;
     }
 
     button{
-    margin-top:20px;
+    margin-top:40px;
     line-height: 60px;
     font-weight:bold;
-    padding: 0 40px;
+    padding: 0 60px;
     background: rgb(255, 136, 0);
     border: none;
     }button:hover{
@@ -69,15 +51,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
 
 /* Random cocktail/meal styles start */
 .cocktail-meal-container {
-    padding: 100px;
-    
+    padding: 100px;  
 }
 .meal{
     background-color: rgb(108, 153, 153);
+    box-shadow: 0 0 0 5px rgb(119, 26, 26);
 }
 .cocktail{
     /*background-image: url("/assets/css/images/orange-cocktails.jpg");*/
     background-color: rgb(245, 166, 76);
+    box-shadow: 0 0 0 5px rgb(119, 26, 26);
     
 }
 .drink-type-container, .drink-vehicle-container, .cuisine-container, .meal-category-container{
