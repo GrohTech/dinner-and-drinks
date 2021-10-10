@@ -43,6 +43,8 @@ body{
     }button:hover{
         background:orangered;
     } 
+/* Header styles end */
+
 
 /* Random cocktail/meal styles start */
 .cocktail-meal-container {
@@ -51,11 +53,17 @@ body{
 .meal{
     background-color: rgb(108, 153, 153);
 }
-
-/* Random cocktail/meal styles start */
 .cocktail{
     background-color: rgb(245, 166, 76);
 }
+.drink-type-container, .drink-vehicle-container, .cuisine-container, .meal-category-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Random cocktail/meal styles end */
+
 
 /* Footer styles start */
 footer ul {
