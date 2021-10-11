@@ -57,7 +57,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
         box-shadow: 0 5px #666;
         transform: translateY(4px); 
 /* Header styles end */
-
+    }
 
 /* Random cocktail/meal styles start */
 .cocktail-meal-container {
