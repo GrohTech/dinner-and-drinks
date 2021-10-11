@@ -71,13 +71,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
     /*background-image: url("/assets/css/images/orange-cocktails.jpg");*/
     background-color: rgb(245, 166, 76);
     box-shadow: 0 0 0 5px rgb(119, 26, 26);
-    
 }
-.drink-type-container, .drink-vehicle-container, .cuisine-container, .meal-category-container, .drink-instructions-container, .drink-instructions, .meal-instructions-container, .meal-instructions{
+#cocktail-img-container, #meal-img-container{
+    margin-bottom: 20px;
+}
+.cocktail-meal-container p, .cocktail-meal-container h4 {
+    padding: 0;
+    margin-top: 10px;
+}
+.flex-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
     padding: 0 20px;
+}
+
+.flex-1{
+    flex-basis: 35%;
+}
+.flex-2{
+    flex-basis: 65%;
 }
 
 /* Random cocktail/meal styles end */
