@@ -100,7 +100,7 @@ function cocktail() {
  document.querySelector("#dinner-drinks").addEventListener("click", function (){
      document.querySelector("#splashy").textContent=cocktail();
  })
- 
+
 
 // Generate random meal
 function meal() {
