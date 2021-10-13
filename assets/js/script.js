@@ -11,21 +11,20 @@
 
 // function dinnerDrinks(){
     function dinnerDrinks(){
-var randomCocktail = document.querySelector("#random-cocktail");
-var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
-var cocktailImg = document.querySelector("#cocktail-img");
-var drinkCategory = document.querySelector("#drink-category");
-var glassType = document.querySelector ("#glass-type");
-var drinkInstructions = document.querySelector("#drink-instructions");
+    var randomCocktail = document.querySelector("#random-cocktail");
+    var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
+    var cocktailImg = document.querySelector("#cocktail-img");
+    var drinkCategory = document.querySelector("#drink-category");
+    var glassType = document.querySelector ("#glass-type");
+    var drinkInstructions = document.querySelector("#drink-instructions");
 
-var ingredient1 = document.createElement("p");
-var ingredient2 = document.createElement("p");
-var ingredient3 = document.createElement("p");
-var ingredient4 = document.createElement("p");
-var ingredient5 = document.createElement("p");
-var ingredient6 = document.createElement("p");
-var ingredient7 = document.createElement("p");
-
+    var ingredient1 = document.createElement("p");  
+    var ingredient2 = document.createElement("p");
+    var ingredient3 = document.createElement("p");
+    var ingredient4 = document.createElement("p");
+    var ingredient5 = document.createElement("p");
+    var ingredient6 = document.createElement("p");
+    var ingredient7 = document.createElement("p");
 // Random meal variables
 var randomMeal = document.querySelector("#random-meal");
 var mealImgContainer = document.querySelector("#meal-img-container");
@@ -35,7 +34,6 @@ var cuisine = document.querySelector("#cuisine");
 var mealInstructions = document.querySelector("#meal-instructions");
 
 var mealIngredient1 = document.createElement("p");
-
 var mealIngredient2 = document.createElement("p");
 var mealIngredient3 = document.createElement("p");
 var mealIngredient4 = document.createElement("p");
@@ -57,6 +55,7 @@ function cocktail() {
  })
  .then(function(data) {
      console.log(data);
+
 
     document.body.append(ingredient1);
     document.body.append(ingredient2);
@@ -85,6 +84,7 @@ function cocktail() {
     glassType.innerHTML = glassTypeValue;
     drinkInstructions.innerHTML = drinkInstructionsValue;
     cocktailImgContainer.append(cocktailImg);
+
     ingredient1.innerHTML = ingredient1Value;
     ingredient2.innerHTML = ingredient2Value;
     ingredient3.innerHTML = ingredient3Value;
@@ -144,7 +144,7 @@ function meal() {
         cuisine.innerHTML = cuisineValue;
         mealInstructions.innerHTML = mealInstructionsValue;
         mealImgContainer.append(mealImg);
-        
+
         mealIngredient1.innerHTML = mealIngredient1Value;
         mealIngredient2.innerHTML = mealIngredient2Value;
         mealIngredient3.innerHTML = mealIngredient3Value;

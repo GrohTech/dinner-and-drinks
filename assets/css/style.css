@@ -1,13 +1,14 @@
 /* Global styles start */
-{
+
+*{
     margin: 0; padding: 0px; box-sizing: border-box;}
 body{
    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffb76b+0,ffa73d+24,ffa73d+24,ffa73d+26,ff7c00+78,ff7f04+84 */
-background: #ffb76b; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 24%, #ffa73d 24%, #ffa73d 26%, #ff7c00 78%, #ff7f04 84%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /*IE6-9 */
+    background: #ffb76b; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffb76b 0%, #ffa73d 24%, #ffa73d 24%, #ffa73d 26%, #ff7c00 78%, #ff7f04 84%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffb76b 0%,#ffa73d 24%,#ffa73d 24%,#ffa73d 26%,#ff7c00 78%,#ff7f04 84%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /*IE6-9 */
     text-align: center;
     font-family: Georgia, verdana,sans-serif;
     font-size: 24px;
@@ -63,22 +64,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', end
 
 /* Random cocktail/meal styles start */
 .cocktail-meal-container {
-    padding: 100px;  
+    padding: 75px;  
 }
 .meal{
     background-color: rgb(108, 153, 153);
     box-shadow: 0 0 0 5px rgb(119, 26, 26);
 }
 .cocktail{
-    /*background-image: url("/assets/css/images/orange-cocktails.jpg");*/
+    background-image: url("/assets/css/images/orange-cocktails.jpg");
     background-color: rgb(245, 166, 76);
     box-shadow: 0 0 0 5px rgb(119, 26, 26);
-    
 }
-.drink-type-container, .drink-vehicle-container, .cuisine-container, .meal-category-container{
+#cocktail-img-container, #meal-img-container{
+    margin-bottom: 20px;
+}
+.cocktail-meal-container p, .cocktail-meal-container h4 {
+    padding: 0;
+    margin-top: 10px;
+}
+.flex-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 0 20px;
+}
+.flex-1{
+    flex-basis: 35%;
+}
+.flex-2{
+    flex-basis: 65%;
 }
 
 /* Random cocktail/meal styles end */
