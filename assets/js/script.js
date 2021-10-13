@@ -100,7 +100,7 @@ function cocktail() {
 })
 }
 // }
-cocktail();
+// cocktail();
 // document.querySelector("#dinner-drinks").addEventListener("click", function (){
 //      document.querySelector("#random-cocktail").textContent=cocktail;
 //   })

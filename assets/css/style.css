@@ -71,7 +71,7 @@ body{
     box-shadow: 0 0 0 5px rgb(119, 26, 26);
 }
 .cocktail{
-    background-image: url("/assets/css/images/orange-cocktails.jpg");
+    /*background-image: url("/assets/css/images/orange-cocktails.jpg");*/
     background-color: rgb(245, 166, 76);
     box-shadow: 0 0 0 5px rgb(119, 26, 26);
 }
@@ -106,10 +106,14 @@ body{
 }
 footer ul {
   list-style-type: none;
+  padding: 0;
 }
 .contributors{
     color: rgb(224, 217, 217);
     padding: 20px;
+    border-bottom: 1px solid #303030;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 .names a {
   text-decoration: none;
@@ -126,8 +130,8 @@ footer div ul {
     list-style: none;
 }
 
-
 /* Footer styles end */
+
 
 /*media queries --- adjust to display size*/
 @media screen and (max-width: 980px){
