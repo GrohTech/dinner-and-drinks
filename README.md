@@ -36,10 +36,10 @@ THEN I'm presented with an option for both a dinner and a cocktail recipe to try
 **View the application, here:** [Dinner & Drinks](https://grohtech.github.io/dinner-and-drinks/ "Dinner & Drinks")
 
 **View website screenshots, here:**  
-![Dinner & Drinks - 1](blahblahblah-1.png "Dinner & Drinks - 1")
-![Dinner & Drinks - 2](blahblahblah-2.png "Dinner & Drinks - 2") 
-![Dinner & Drinks - 3](blahblahblah-3.png "Dinner & Drinks - 3") 
-![Dinner & Drinks - 4](blahblahblah-4.png "Dinner & Drinks - 4")
+![Dinner & Drinks - 1](dinner-and-drinks-1.png "Dinner & Drinks - 1")
+![Dinner & Drinks - 2](dinner-and-drinks-2.png "Dinner & Drinks - 2") 
+![Dinner & Drinks - 3](dinner-and-drinks-3.png "Dinner & Drinks - 3") 
+
 
 
 ## TECHNOLOGIES USED
@@ -50,10 +50,10 @@ THEN I'm presented with an option for both a dinner and a cocktail recipe to try
 * JavaScript
 * Git
 * APIs
-    1. ![TheCocktailDB](https://www.thecocktaildb.com/api.php "TheCocktailDB")
-    2. ![TheMealDB](https://www.themealdb.com/api.php "TheMealDB")
+    1. [TheCocktailDB](https://www.thecocktaildb.com/api.php "TheCocktailDB")
+    2. [TheMealDB](https://www.themealdb.com/api.php "TheMealDB")
 * CSS Framework
-    1. ![PureCSS](https://purecss.io/layouts/ "PureCSS")
+    1. [PureCSS](https://purecss.io/layouts/ "PureCSS")
 
 
 ## MAINTAINERS

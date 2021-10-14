@@ -7,8 +7,13 @@
   //  document.querySelector("#splashy").textContent="Does something";
 //})
 
+var cocktailMealContainer = document.querySelector(".cocktail-meal-container")
+cocktailMealContainer.style.display = "none";
+
+
 // Random cocktail variables
 function dinnerDrinks(){
+    cocktailMealContainer.style.display = "flex";
     var randomCocktail = document.querySelector("#random-cocktail");
     var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
     var cocktailImg = document.querySelector("#cocktail-img");
@@ -47,9 +52,9 @@ function cocktail() {
           for(var i = 1; i <= 20; i++){
             var drinkIngredientList = data.drinks[0]['strIngredient' + i ];
             var drinkMeasureList = data.drinks[0]['strMeasure' + i ];
-            // if(!drinkMeasureList){
-            //     break;
-            // }
+            if(!drinkMeasureList){
+                drinkMeasureList ="";
+            }
             if(!drinkIngredientList)
             {
                 break;
@@ -110,7 +115,7 @@ function meal() {
             var mealMeasureList = data.meals[0]['strMeasure' + i ];
             if(!mealMeasureList)
             {
-                break;
+                mealMeasureList = "";
             }
             if(!mealIngredientList)
             {
