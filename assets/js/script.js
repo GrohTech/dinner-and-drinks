@@ -1,144 +1,163 @@
+//button
+//onclick does no appy to multiple style but can not be used in all browsers
+// document.querySelector("#dinner-drinks").addEventListener("click", function (){
+//     console.log("Does something");
+// })
+//document.querySelector("#dinner-drinks").addEventListener("click", function (){
+  //  document.querySelector("#splashy").textContent="Does something";
+//})
+
+// Hide cocktail-meal-container until button click
+var cocktailMealContainer = document.querySelector(".cocktail-meal-container")
+cocktailMealContainer.style.display = "none";
+
 
 // Random cocktail variables
-var randomCocktail = document.querySelector("#random-cocktail");
-var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
-var cocktailImg = document.querySelector("#cocktail-img");
-var drinkCategory = document.querySelector("#drink-category");
-var glassType = document.querySelector ("#glass-type");
-// var ingredient1 = document.createElement("p");
-// var ingredient2 = document.createElement("p");
-// var ingredient3 = document.createElement("p");
-// var ingredient4 = document.createElement("p");
-// var ingredient5 = document.createElement("p");
-// var ingredient6 = document.createElement("p");
-// var ingredient7 = document.createElement("p");
+function dinnerDrinks(){
+    //display cocktail-meal-container after button click
+    cocktailMealContainer.style.display = "flex";
+    var randomCocktail = document.querySelector("#random-cocktail");
+    var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
+    var cocktailImg = document.querySelector("#cocktail-img");
+    var drinkCategory = document.querySelector("#drink-category");
+    var glassType = document.querySelector ("#glass-type");
+    //newly added ingredient list
+    var ingredDlist = document.querySelector("#ingred-Dlist");
+    var measureDlist = document.querySelector("#measure-Dlist");
+    var drinkInstructions = document.querySelector("#drink-instructions");
+    // Get recent cocktail container value from localStorage
+    // var recentCocktail = JSON.parse(window.localStorage.getItem("cocktail") || []);
 
-// Random meal variables
-var randomMeal = document.querySelector("#random-meal");
-var mealImgContainer = document.querySelector("#meal-img-container");
-var mealImg = document.querySelector("#meal-img");
-var mealCategory = document.querySelector("#meal-category");
-var cuisine = document.querySelector("#cuisine");
-// var mealIngredient1 = document.createElement("p");
-// var mealIngredient2 = document.createElement("p");
-// var mealIngredient3 = document.createElement("p");
-// var mealIngredient4 = document.createElement("p");
-// var mealIngredient5 = document.createElement("p");
-// var mealIngredient6 = document.createElement("p");
-// var mealIngredient7 = document.createElement("p");
 
+    // Random meal variables
+    var randomMeal = document.querySelector("#random-meal");
+    var mealImgContainer = document.querySelector("#meal-img-container");
+    var mealImg = document.querySelector("#meal-img");
+    var mealCategory = document.querySelector("#meal-category");
+    var cuisine = document.querySelector("#cuisine");
+    //newly added Drink ingredient list
+    var measureMlist = document.querySelector("#measure-Mlist");
+    var ingredMlist = document.querySelector("#ingred-Mlist");
+    var mealInstructions = document.querySelector("#meal-instructions");
 
 
 // Generate random cocktail
 function cocktail() {
-fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    // Set recent cocktail container value to localStorage
+    // var wholeCocktail = document.querySelector(".cocktail").value;
+    // localStorage.setItem("cocktail", JSON.stringify(wholeCocktail));
+
+ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 
 .then(function(response) {
     return response.json();
-})
-.then(function(data) {
-    console.log(data);
+ })
+ .then(function(data) {
+     console.log(data);
+        //for loop for cocktails
+          for(var i = 1; i <= 20; i++){
+            var drinkIngredient = data.drinks[0]['strIngredient' + i ];
+            var drinkMeasurement = data.drinks[0]['strMeasure' + i ];
+            if(!drinkMeasurement){
+                drinkMeasurement ="";
+            }
+            if(!drinkIngredient)
+            {
+                break;
+            }
+            //risk if empty or only 2 ingredientss
+            var tempPtag = document.createElement("p");
+            ingredDlist.append(tempPtag);
+            measureDlist.append(tempPtag);
+            // measureDlist.append(tempPtag2);
+            // var tempIngredient = data.meals[0].strIngredient1; //142 old way
 
+            tempPtag.innerHTML = drinkMeasurement + " " + drinkIngredient;
+            // document.getElementById("ingred-Dlist").innerHTML = drinklIngredientList;
 
-    // document.body.append(ingredient1);
-    // document.body.append(ingredient2);
-    // document.body.append(ingredient3);
-    // document.body.append(ingredient4);
-    // document.body.append(ingredient5);
-    // document.body.append(ingredient6);
-    // document.body.append(ingredient7);
-
+        }
 
     var randomCocktailValue = data.drinks[0].strDrink;
     cocktailImg.setAttribute('src', data.drinks[0].strDrinkThumb);
     var drinkCategoryValue = data.drinks[0].strCategory;
     var glassTypeValue = data.drinks[0].strGlass;
-    // var ingredient1Value = data.drinks[0].strIngredient1;
-    // var ingredient2Value = data.drinks[0].strIngredient2;
-    // var ingredient3Value = data.drinks[0].strIngredient3;
-    // var ingredient4Value = data.drinks[0].strIngredient4;
-    // var ingredient5Value = data.drinks[0].strIngredient5;
-    // var ingredient6Value = data.drinks[0].strIngredient6;
-    // var ingredient7Value = data.drinks[0].strIngredient7;
+    var drinkInstructionsValue = data.drinks[0].strInstructions;
+
 
     randomCocktail.innerHTML = randomCocktailValue;
     drinkCategory.innerHTML = drinkCategoryValue;
     glassType.innerHTML = glassTypeValue;
+    drinkInstructions.innerHTML = drinkInstructionsValue;
     cocktailImgContainer.append(cocktailImg);
-    // ingredient1.innerHTML = ingredient1Value;
-    // ingredient2.innerHTML = ingredient2Value;
-    // ingredient3.innerHTML = ingredient3Value;
-    // ingredient4.innerHTML = ingredient4Value;
-    // ingredient5.innerHTML = ingredient5Value;
-    // ingredient6.innerHTML = ingredient6Value;
-    // ingredient7.innerHTML = ingredient7Value;
-
 
 })
 .catch(function (err){
     console.log(err);
 })
-
 }
+// }
 cocktail();
+// document.querySelector("#dinner-drinks").addEventListener("click", function (){
+//      document.querySelector("#random-cocktail").textContent=cocktail;
+//   })
+
 
 // Generate random meal
 function meal() {
-    fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
 
     .then(function(response) {
-        return response.json();
-    })
+         return response.json();
+     })
     .then(function(data) {
         console.log(data);
+        //append to body
+        //append to div
+       //  var ingredientArray = [mealIngredient2,mealIngredient2,mealIngredient3,mealIngredient4,mealIngredient5,mealIngredient6,mealIngredient7];
+        //loop through 20 times?
+        //Tim walk through for loop
+        for(var i = 1; i <= 20; i++){
+            var mealIngredient = data.meals[0]['strIngredient' + i ];
+            var mealMeasurement = data.meals[0]['strMeasure' + i ];
+            if(!mealMeasurement)
+            {
+                mealMeasurement = "";
+            }
+            if(!mealIngredient)
+            {
+                break;
+            }
+            //risk if empty or only 2 ingredientss
+            var tempPtag = document.createElement("p");
+            ingredMlist.append(tempPtag);
+            measureMlist.append(tempPtag);
+            // var tempIngredient = data.meals[0].strIngredient1; //142 old way
 
-        // document.body.append(mealIngredient1);
-        // document.body.append(mealIngredient2);
-        // document.body.append(mealIngredient3);
-        // document.body.append(mealIngredient4);
-        // document.body.append(mealIngredient5);
-        // document.body.append(mealIngredient6);
-        // document.body.append(mealIngredient7);
+            tempPtag.innerHTML = mealMeasurement + " " + mealIngredient;
+            // document.getElementById("ingred-Mlist").innerHTML = mealIngredientList;
+        }
 
 
         var randomMealValue = data.meals[0].strMeal;
         mealImg.setAttribute('src', data.meals[0].strMealThumb);
         var mealCategoryValue = data.meals[0].strCategory;
         var cuisineValue = data.meals[0].strArea;
-        // var mealIngredient1Value = data.meals[0].strIngredient1;
-        // var mealIngredient2Value = data.meals[0].strIngredient2;
-        // var mealIngredient3Value = data.meals[0].strIngredient3;
-        // var mealIngredient4Value = data.meals[0].strIngredient4;
-        // var mealIngredient5Value = data.meals[0].strIngredient5;
-        // var mealIngredient6Value = data.meals[0].strIngredient6;
-        // var mealIngredient7Value = data.meals[0].strIngredient7;
+        var mealInstructionsValue = data.meals[0].strInstructions;
 
 
         randomMeal.innerHTML = randomMealValue;
         mealCategory.innerHTML = mealCategoryValue;
         cuisine.innerHTML = cuisineValue;
+        mealInstructions.innerHTML = mealInstructionsValue;
         mealImgContainer.append(mealImg);
-        // mealIngredient1.innerHTML = mealIngredient1Value;
-        // mealIngredient2.innerHTML = mealIngredient2Value;
-        // mealIngredient3.innerHTML = mealIngredient3Value;
-        // mealIngredient4.innerHTML = mealIngredient4Value;
-        // mealIngredient5.innerHTML = mealIngredient5Value;
-        // mealIngredient6.innerHTML = mealIngredient6Value;
-        // mealIngredient7.innerHTML = mealIngredient7Value;
+
+
     })
     .catch(function (err){
         console.log(err);
     })
+}
+meal();
 
     }
-    meal();
-// //button
-// function createButton(){
-//     var button = document.createElement("button");
-//     element.appendChild(document.createTextNode("Click Me!"));
-//     var page = document.getElementById("button");
-//     page.appendChild(element);
-//     console.log(element);
-//
-// }
-// createButton();
+    drinkIngredientList= "";

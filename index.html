@@ -7,37 +7,53 @@
         <link rel ="stylesheet" href="./assets/css/style.css">
         <link rel="icon" href="assets/css/images/favicon.ico" type ="image/x-icon"/>
         <title>Dinner and Drinks</title>
-        
     </head>
     <body>
-        
-        <section id = Dinner-drinks>
+
+        <section>
             <header>
                 <!--webpage title(what the user sees)-->
-                <img id=logo src="assets/css/images/D-D-logo.png" alt=""/>
+                <img src="assets/css/images/D-D-logo.png" alt=""/>
                 <h1>Dinner and Drinks</h1>
                 <!--Button as a link?? Hide cocktail and meals until button is pushed-->
-                
+
             </header>
-            <div><button onclick = "createButton()">What am I making?</button></div>
+               <!--funtion as styling class = begin-->
+           <!-- <button id ="Dinner-drinks" class="begin">What's for dinner?</button> -->
             <!--Have cocktail and meal divs side-by-side, each box a different background color-->
             <!-- Cocktail section make orange color -->
+            <button onclick="dinnerDrinks()">What's for dinner?</button>
             <div class="cocktail-meal-container pure-g">
                 <div class="cocktail pure-u-1-2" class="cocktails">
                     <div>
                         <h2>Here's your cocktail recipe:</h2>
+                        <!-- <p id ="splashy"></p>dsiplay randomly generated cocktail recipe -->
                         <h3 id="random-cocktail"></h3>
+                        <!-- <p id ="splashy"></p>dsiplay randomly generated cocktail recipe -->
                         <div id="cocktail-img-container">
                             <img id="cocktail-img" width="300px" height="300px">
                         </div>
 
-                        <div class=drink-type-container pure-g>
-                            <h4>Drink type:&nbsp;</h4>
-                            <p id="drink-category"></p>
+                        <div class=flex-container pure-g>
+                            <h4 class= "flex-1">Drink type:&nbsp;</h4>
+                            <p class= "flex-2" id="drink-category"></p>
                         </div>
-                        <div class="drink-vehicle-container">
-                            <h4>Drink Vehicle:&nbsp;</h4>
-                            <p id="glass-type"></p>
+                        <div class="flex-container">
+                            <h4 class= "flex-1">Drink Vehicle:&nbsp;</h4>
+                            <p class= "flex-2" id="glass-type"></p>
+                        </div>
+
+                        <!--Ingredient list-->
+                        <div class="flex-container">
+                            <h4 class = "flex-1">Ingredients:&nbsp;</h4>
+                            <div class= "flex-2">
+                            <p id="measure-Dlist"></p>
+                            <p id="ingred-Dlist"></p>
+                          </div>
+                        </div>
+                        <div class="flex-container">
+                            <h4 class= "flex-1">Instructions:&nbsp;</h4>
+                            <p class= "flex-2" id="drink-instructions"></p>
                         </div>
                     </div>
                 </div>
@@ -46,19 +62,29 @@
                 <div class="meal pure-u-1-2" class="meals">
                     <div>
                         <h2>Here's your meal recipe:</h2>
+                        <p id="mrecipe"></p><!--dsiplay randomly generated meal recipe-->
                         <h3 id="random-meal"></h3>
                         <div id="meal-img-container">
                             <img id="meal-img" width="300px" height="300px">
                         </div>
-                        <div class="cuisine-container">
-                            <div class="cuisine-container">
-                                <h4>Cuisine:&nbsp;</h4>
-                                <p id="cuisine"></p>
+                        <div class="flex-container">
+                                <h4 class= "flex-1">Cuisine:&nbsp;</h4>
+                                <p class= "flex-2" id="cuisine"></p>
+                        </div>
+                        <div class="flex-container">
+                            <h4 class= "flex-1">Meal type:&nbsp;</h4>
+                            <p class= "flex-2" id="meal-category"></p>
+                        </div>
+                        <div class="flex-container">
+                            <h4 class= "flex-1">Ingredients:&nbsp;</h4>
+                              <div class= "flex-2">
+                              <p id="measure-Mlist"></p>
+                              <p id=ingred-Mlist></p>
                             </div>
                         </div>
-                        <div class="meal-category-container">
-                            <h4>Meal type:&nbsp;</h4>
-                            <p id="meal-category"></p>
+                        <div class="flex-container">
+                            <h4 class= "flex-1">Instructions:&nbsp;</h4>
+                            <p class= "flex-2" id="meal-instructions"></p>
                         </div>
                     </div>
                 </div>
@@ -74,6 +100,6 @@
                 </ul>
             </div>
         </footer>
-        <script type="text/javascript" src="./assets/js/script.js"></script>      
+        <script type="text/javascript" src="./assets/js/script.js"></script>
     </body>
 </html>
