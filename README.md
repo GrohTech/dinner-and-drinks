@@ -36,9 +36,9 @@ THEN I'm presented with an option for both a dinner and a cocktail recipe to try
 **View the application, here:** [Dinner & Drinks](https://grohtech.github.io/dinner-and-drinks/ "Dinner & Drinks")
 
 **View website screenshots, here:**  
-![Dinner & Drinks - 1](dinner-and-drinks-1.png "Dinner & Drinks - 1")
-![Dinner & Drinks - 2](dinner-and-drinks-2.png "Dinner & Drinks - 2") 
-![Dinner & Drinks - 3](dinner-and-drinks-3.png "Dinner & Drinks - 3") 
+![Dinner & Drinks - 1](./assets/images/dinner-and-drinks-1.png "Dinner & Drinks - 1")
+![Dinner & Drinks - 2](./assets/images/dinner-and-drinks-2.png "Dinner & Drinks - 2") 
+![Dinner & Drinks - 3](./assets/images/dinner-and-drinks-3.png "Dinner & Drinks - 3") 
 
 
 
