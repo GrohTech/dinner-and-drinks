@@ -7,12 +7,14 @@
   //  document.querySelector("#splashy").textContent="Does something";
 //})
 
+// Hide cocktail-meal-container until button click
 var cocktailMealContainer = document.querySelector(".cocktail-meal-container")
 cocktailMealContainer.style.display = "none";
 
 
 // Random cocktail variables
 function dinnerDrinks(){
+    //display cocktail-meal-container after button click
     cocktailMealContainer.style.display = "flex";
     var randomCocktail = document.querySelector("#random-cocktail");
     var cocktailImgContainer = document.querySelector("#cocktailImgContainer");
@@ -23,6 +25,8 @@ function dinnerDrinks(){
     var ingredDlist = document.querySelector("#ingred-Dlist");
     var measureDlist = document.querySelector("#measure-Dlist");
     var drinkInstructions = document.querySelector("#drink-instructions");
+    // Get recent cocktail container value from localStorage
+    // var recentCocktail = JSON.parse(window.localStorage.getItem("cocktail") || []);
 
 
     // Random meal variables
@@ -37,10 +41,12 @@ function dinnerDrinks(){
     var mealInstructions = document.querySelector("#meal-instructions");
 
 
-    // // Generate random cocktail
-
-
+// Generate random cocktail
 function cocktail() {
+    // Set recent cocktail container value to localStorage
+    // var wholeCocktail = document.querySelector(".cocktail").value;
+    // localStorage.setItem("cocktail", JSON.stringify(wholeCocktail));
+
  fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
 
 .then(function(response) {
@@ -48,14 +54,14 @@ function cocktail() {
  })
  .then(function(data) {
      console.log(data);
-  //for loop for cocktails
+        //for loop for cocktails
           for(var i = 1; i <= 20; i++){
-            var drinkIngredientList = data.drinks[0]['strIngredient' + i ];
-            var drinkMeasureList = data.drinks[0]['strMeasure' + i ];
-            if(!drinkMeasureList){
-                drinkMeasureList ="";
+            var drinkIngredient = data.drinks[0]['strIngredient' + i ];
+            var drinkMeasurement = data.drinks[0]['strMeasure' + i ];
+            if(!drinkMeasurement){
+                drinkMeasurement ="";
             }
-            if(!drinkIngredientList)
+            if(!drinkIngredient)
             {
                 break;
             }
@@ -66,7 +72,7 @@ function cocktail() {
             // measureDlist.append(tempPtag2);
             // var tempIngredient = data.meals[0].strIngredient1; //142 old way
 
-            tempPtag.innerHTML = drinkMeasureList + " " + drinkIngredientList;
+            tempPtag.innerHTML = drinkMeasurement + " " + drinkIngredient;
             // document.getElementById("ingred-Dlist").innerHTML = drinklIngredientList;
 
         }
@@ -111,13 +117,13 @@ function meal() {
         //loop through 20 times?
         //Tim walk through for loop
         for(var i = 1; i <= 20; i++){
-            var mealIngredientList = data.meals[0]['strIngredient' + i ];
-            var mealMeasureList = data.meals[0]['strMeasure' + i ];
-            if(!mealMeasureList)
+            var mealIngredient = data.meals[0]['strIngredient' + i ];
+            var mealMeasurement = data.meals[0]['strMeasure' + i ];
+            if(!mealMeasurement)
             {
-                mealMeasureList = "";
+                mealMeasurement = "";
             }
-            if(!mealIngredientList)
+            if(!mealIngredient)
             {
                 break;
             }
@@ -127,7 +133,7 @@ function meal() {
             measureMlist.append(tempPtag);
             // var tempIngredient = data.meals[0].strIngredient1; //142 old way
 
-            tempPtag.innerHTML = mealMeasureList + " " + mealIngredientList;
+            tempPtag.innerHTML = mealMeasurement + " " + mealIngredient;
             // document.getElementById("ingred-Mlist").innerHTML = mealIngredientList;
         }
 
