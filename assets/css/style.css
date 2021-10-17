@@ -94,9 +94,11 @@ body{
 
 .flex-1{
     flex-basis: 35%;
+    font-size: 25;
 }
 .flex-2{
     flex-basis: 65%;
+    font-size: 14;
 }
 
 /* Random cocktail/meal styles end */
@@ -175,12 +177,13 @@ footer div ul {
 
     @media screen and (max-width:768px){
         section{
-            padding: 30px 15px;
+            padding: 10px 5px;
 
             }
             footer h2 {
                 text-align:center;
                 width:100%;
+                
             }
             .onClick{
                 text-align: center;
@@ -194,22 +197,105 @@ footer div ul {
             h1{
                 font-size: 50px;
             }
+           
             img {
-                height: 200px;
-                width: 200px;
+                height: 150px;
+                width: 150px;
+            }
+            .cocktail-meal-container{
+                flex-direction: column;
+                flex: 0 100%;
+                padding: 10px;
+                text-align: center;
+            }
+            .cocktail .meal{
+                flex: 0 100%;
+                flex-wrap: wrap;
+                padding: 5px;
+                width: 80%;
+            }
+            h2{
+                flex: 1 100%;
+                font-size: 25px;
+            }
+            h4{
+                flex: 100%;
+                font-size: 15px;
+            }
+            .flex-container{
+                width: fit-content;
+                margin: 0;
+                flex-direction: column;
+                flex: 0 80%;
+                padding: 25px;
+                text-align: center;
+            }
+            .flex-1{
+                font-size: 35px;
+            }
+            .flex-2{
+                font-size: 14px;
+                flex-wrap: wrap;
             }
     }
             
     @media screen and (max-width:575px){
         .onClick {
-            width:100%;
+            text-align: center;
+            width:100;
+            flex: 1 100%;
         }
         header {
-            height: 400px;
+            height: 100px;
             padding: 10px;
         }
         img {
-            height: 150px;
-            width: 150px;
+            height: 110px;
+            width: 110px;
+        }
+        h1{
+            font-size: 25px;
+        }
+       
+        .cocktail-meal-container{
+            flex-direction: column;
+            flex: 0 100%;
+            padding: 10px;
+            text-align: center;
+        }
+        .cocktail .meal{
+            flex: 0 100%;
+            flex-wrap: wrap;
+            padding: 5px;
+            width: 80%;
+        }
+       
+        .flex-container{
+            width: fit-content;
+            margin: 0;
+            flex-direction: column;
+            flex: 0 80%;
+            padding: 10px;
+            text-align: center;
+        }
+        .flex-1{
+            font-size: 20px;
+        }
+        .flex-2{
+            font-size: 12px;
+            flex-wrap: wrap;
+        }
+        
+        footer{
+            height: 100px;
+            flex-wrap: wrap;
+        }
+        .contributors{
+            font-size: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .names{
+            font-size: 14px;
         }
     }
