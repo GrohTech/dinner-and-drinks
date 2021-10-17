@@ -9,7 +9,18 @@
 
 var cocktailMealContainer = document.querySelector(".cocktail-meal-container")
 cocktailMealContainer.style.display = "none";
-
+//newly added ingredient list
+//global variables
+    
+     //newly added Drink ingredient list
+     //global variables
+    
+    //  function removeNode(){
+    //     const myDiv = document.getElementById("#ingred-Dlist")
+    //     const parent = myDiv.parentNode;
+    //     parent.removeChild(myDiv);
+    //     console.log("ingredients removed successfully")
+    // }
 
 // Random cocktail variables
 function dinnerDrinks(){
@@ -24,7 +35,7 @@ function dinnerDrinks(){
     var measureDlist = document.querySelector("#measure-Dlist");
     var drinkInstructions = document.querySelector("#drink-instructions");
 
-
+     
     // Random meal variables
     var randomMeal = document.querySelector("#random-meal");
     var mealImgContainer = document.querySelector("#meal-img-container");
@@ -50,6 +61,7 @@ function cocktail() {
      console.log(data);
   //for loop for cocktails
           for(var i = 1; i <= 20; i++){
+            
             var drinkIngredientList = data.drinks[0]['strIngredient' + i ];
             var drinkMeasureList = data.drinks[0]['strMeasure' + i ];
             if(!drinkMeasureList){
@@ -68,8 +80,9 @@ function cocktail() {
 
             tempPtag.innerHTML = drinkMeasureList + " " + drinkIngredientList;
             // document.getElementById("ingred-Dlist").innerHTML = drinklIngredientList;
-
+             
         }
+        
 
     var randomCocktailValue = data.drinks[0].strDrink;
     cocktailImg.setAttribute('src', data.drinks[0].strDrinkThumb);
@@ -83,7 +96,8 @@ function cocktail() {
     glassType.innerHTML = glassTypeValue;
     drinkInstructions.innerHTML = drinkInstructionsValue;
     cocktailImgContainer.append(cocktailImg);
-
+    ingredDlist = document.getElementById("#ingred-Dlist").innerHTML ="";
+    measureDlist = document.getElementById("#measure-Dlist").innerHTML ="";   
 })
 .catch(function (err){
     console.log(err);
@@ -94,7 +108,9 @@ cocktail();
 // document.querySelector("#dinner-drinks").addEventListener("click", function (){
 //      document.querySelector("#random-cocktail").textContent=cocktail;
 //   })
-
+// ingredDlist ="";
+// measureDlist="";
+    
 
 // Generate random meal
 function meal() {
@@ -153,5 +169,6 @@ function meal() {
 }
 meal();
 
+
     }
-    drinkIngredientList= "";
+   

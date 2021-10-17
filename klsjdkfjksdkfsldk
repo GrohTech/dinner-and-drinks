@@ -1,0 +1,48 @@
+[33m8581f03[m[33m ([m[1;36mHEAD -> [m[1;32minitial/stageBtn[m[33m, [m[1;31morigin/initial/stageBtn[m[33m)[m hide container, final mediaquery, add screenshots,- Heather/Lauren
+[33m4c6d33e[m update drink/meal measurements & ingredient lists
+[33m352b4b8[m Other for loop plus only showing 1 ingredient
+[33m6241b90[m Merge branch 'main' into initial/stageBtn
+[33mfd6b4a7[m[33m ([m[1;32mmain[m[33m)[m Merge pull request #6 from GrohTech/develop
+[33m18eb9f5[m working 3.0
+[33m8ddba62[m working button and update on ingredients
+[33m541804c[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m push everything together 2.0
+[33mcb04e36[m pushing everything together
+[33m526ae28[m pop up cocktail button
+[33m7843fe1[m add additional flex styles to cocktail/meal categories
+[33m189c51f[m add cocktail/meal instructions from APIs, add minor CSS footer styles
+[33mb42480c[m update README
+[33m1b8d9ad[m resolve merge conflicts
+[33m8bcc4cf[m unknown changes
+[33m644bc54[m sticky header, button styling
+[33me863954[m added border to meal/cocktails divs, edited header
+[33ma96123d[m Merge branch 'develop' of github.com:GrohTech/dinner-and-drinks into develop
+[33mbef02c1[m add gradient background, header and footer styling
+[33m18eeda8[m add api img, add flex to cocktail/meal info
+[33me5572da[m fix merge conflicts
+[33m71bf65a[m working with purecss
+[33m7b0b7c3[m Merge remote-tracking branch 'origin' into add-css
+[33m706848b[m added styling for favicon, pure css boxes, footer
+[33md2d5b75[m resolve merge conflicts
+[33m936330b[m add purecss framework stylesheet, add grid, update html
+[33mccdc57c[m add favicon
+[33mdff24e5[m changed colors, added comments
+[33madd1cf9[m Merge branch 'develop' of github.com:GrohTech/dinner-and-drinks into develop
+[33m8cbe445[m changed background color
+[33m0495eb9[m changed color
+[33m319d11b[m test out push and pull
+[33m3671202[m  media queries
+[33m5c2d455[m copied code from GitHub
+[33m32ee9fa[m adding some of the media queries
+[33me7f74de[m Merge pull request #4 from GrohTech/feature/initial-setup
+[33mc136763[m update cocktail/meal API data, update HTML
+[33m9eb52d9[m add html, update button
+[33m9f9f63f[m Merge pull request #3 from GrohTech/feature/initial-setup
+[33m5ba2575[m Merge branch 'main' into feature/initial-setup
+[33mb1a90a7[m Merge pull request #1 from GrohTech/add-css
+[33m79f01ef[m Merge pull request #2 from GrohTech/initial/stageBtn
+[33md2e5b80[m initial readme
+[33ma8d2e25[m trying to make the button work
+[33m1a0ec42[m test meal fetch request
+[33m991a15a[m test cocktail fetch request
+[33me6032d4[m set up files, add gitignore
+[33mdfd552b[m Initial commit
