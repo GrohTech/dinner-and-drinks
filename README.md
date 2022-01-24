@@ -15,7 +15,7 @@
 ## INTRODUCTION
 ---------------
 
-Dinner & Drinks is the answer to anyone who is hosting a last-minute dinner party and needs recipe ideas. Busy adults would also find this useful for preparing new and interesting meals during the work week.
+Dinner & Drinks is the app for anyone who is hosting a last-minute dinner party and needs recipe ideas. Built with HTML, CSS, JavaScript, and pulling data using client-side APIs, busy adults would find this app useful for preparing new and interesting meals during the work week.
 
 ## USER STORY
 ---------------
